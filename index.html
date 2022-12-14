@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costomer</title>
+    <link rel="stylesheet" href="css/home.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav id="navigation">
+            <div class="logo">
+                <img src="images/logo2.png" alt="" width="30%">
+                <h2>MARKET</h2>
+            </div>
+            <div class="search-container">
+                <i class="material-icons">search</i>
+                <input type="search" id="searcProduct" placeholder="Search">
+                <span>Search</span>
+            </div>
+            <div class="login">
+                <ul>
+                    <button id="btn-card"><a href="pages/cart.html">CART : </a><span id="qty"></span></button>
+                    <button id="btn-login"><li>LOGIN</li><i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                    <button id="btn-register"><li>REGISTER</li><i><a href="#" class="fa fa-user-plus"></a></i></button>
+                </ul>
+            </div>
+        </nav>
+    </div>  
+    <div class="seachBar">
+        <div class="dropdown">
+            <button onclick="dropdowns()" class="dropbtn">New Product</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">MacBook</a>
+                <a href="#about">Dell</a>
+                <a href="#contact">HP</a>
+                <a href="#contact">Sumsung</a>
+                <a href="#contact">MSI</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="banner">
+        <img src="images/banner1.jpg" alt="">
+    </div> -->
+    <div class="card-container">
+
+     <!-- display on sceen-->
+
+    </div>
+    <div class="detail-ofproduct" style="display:none">
+
+
+        <!-- for dispaly detail -->
+
+
+    </div>
+    <!-- <!-tp up ->  --> 
+    <div id="product-dialog" style="display: none">
+        <dialog open>
+          <section>
+            <h2 id="titleOfForm">REGISTER</h2>
+            <label for="" id="label-name1">First Name</label>
+            <input id="first-name" type="text" placeholder="Enter your first name" />
+            <label for="" id="label-name2">Last Name</label>
+            <input id="last-name" type="text" placeholder="Enter your last name" />
+            <label for="">Phone Number or Email*</label>
+            <input id="email" type="email" placeholder="Enter your email" />
+            <label for="">Password</label>
+            <input id="password" type="password" placeholder="Enter your password" />
+            <label for="" id="password-label">Remeber me</label>
+          </section>
+          <div class="media-register">
+            <p id="optionLogin">or sign up wiht</p>
+            <i><a href="#" class="fa fa-facebook"></a></i>
+            <i><a href="#" class="fa fa-google-plus"></a></i>
+          </div>
+          <menu>
+            <button onclick="addEventListener(onCancel)">Cancel</button>
+            <button onclick="addEventListener(onCreate)">Save</button>
+          </menu>
+        </dialog>
+    </div>
+
+
+
+
+    <footer>
+        <div class="customer-service">
+            <h3>Customer Service</h3>
+            <h4 id="text">Contact Us</h4>
+            <h4 id="text">Private Policy</h4>
+        </div>
+        <div class="contact-media">
+            <div class="follow">
+                <h3>Follow  Us</h3>
+            </div>
+            <div class="media">
+                <i><a href="#" class="fa fa-facebook"></a></i>
+                <i><a href="#" class="fa fa-twitter"></a></i>
+                <i><a href="#" class="fa fa-google"></a></i>
+                <i><a href="#" class="fa fa-linkedin"></a></i>
+                <i><a href="#" class="fa fa-youtube"></a></i>
+            </div>
+        </div>
+        <div class="abuot">
+            <h3>About us</h3>
+            <h4 id="texts">About MARKET</h4>
+        </div>
+    </footer>
+</body> 
+<script src="js/home.js"></script>
+</html>

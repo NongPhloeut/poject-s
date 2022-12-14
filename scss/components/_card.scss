@@ -1,0 +1,65 @@
+@import"mixin";
+@import"button";
+@import"variables";
+.card-container{
+    padding: 50px;
+    flex: 3;
+    background: $bg;
+    display: flex;
+    flex-wrap: wrap;
+    @include responsiveSize(medium){
+        padding: 10px;
+    }
+    @include responsiveSize(large){
+        padding: 10px;
+        // margin-left: 35px;
+    }
+    @include responsiveSize(small){
+        padding: 5px;
+        // margin-right: 35px;
+    }
+    .card-product{
+        box-sizing: border-box;
+        padding: 30px;
+        background:white;
+        margin: 10px;
+        margin-left: 13px;
+        width: 23%;
+        border-radius: $border-radius;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @include responsiveSize(large){
+            // background: #000;
+            width: 45%;
+            // height: 40vh;
+        }
+        @include responsiveSize(small){
+            width: 100%;
+        }
+        .card-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 10px;
+            img{
+                width: 85%;
+                height: 120px;
+            }
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .buyBtn{
+        display: flex;
+        justify-content: flex-end;
+        #buyBtn{
+            @include button;
+            width: 40%;
+            // @include buttonAlert;
+        }
+    }
+    .card-product:hover{
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+}

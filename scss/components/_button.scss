@@ -1,0 +1,22 @@
+@import"variables";
+@import"dropdown";
+@mixin button{
+    color: $text-color;
+    padding: 10px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    background:blue;
+    border-radius:$border-radius;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    @content;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@mixin buttonAlert {
+    background: #000;
+    width: 40%;
+}

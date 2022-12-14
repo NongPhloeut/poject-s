@@ -1,0 +1,10 @@
+@import"mixin";
+@mixin  input{
+    width: 100%;
+    padding:10px;
+    box-sizing: border-box;
+    border-radius: $border-radius;
+    border:solid 1px black;
+    outline: none;
+    margin-bottom:10px;
+}

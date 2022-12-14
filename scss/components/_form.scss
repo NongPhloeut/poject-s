@@ -1,0 +1,89 @@
+@import"button";
+#manage{
+  display: flex;
+  justify-content: center;
+  // background: #000;
+}
+#product-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(78, 76, 76, 0.75);
+    z-index: 10;
+  }
+  
+  dialog {
+    position: fixed;
+    top: 0px;
+    left: 25%;
+    width: 50%;
+    z-index: 100;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  dialog header {
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.25rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  dialog section {
+    padding: 1rem;
+  }
+  
+  dialog menu {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  
+  dialog label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    display: block;
+    width: 98%;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  ::placeholder{
+    font-size: 15px;
+  }
+  
+  input:focus {
+    background-color: #f0e6fd;
+    outline: none;
+    border-color: var(--main-color-light);
+  }
+  button{
+    @include button;
+    margin: 10px;
+    width: 80px;
+  }
+#button-remove{
+    background:red;
+}
+
+select{
+  padding: 5px;
+  width: 50%;
+  border-radius: 10px;
+}

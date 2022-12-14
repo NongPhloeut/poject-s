@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller</title>
+  <link rel="stylesheet" href="../css/seller.min.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="nav-container">
+    <nav id="navigation">
+      <div class="logo">
+        <img src="../images/logo2.png" alt="" width="30%">
+        <h2>MARKET</h2>
+      </div>
+      <div id="manage">
+          <h1>Product management</h1>
+      </div>
+    </nav>
+  </div>
+  <div class="header">
+    <div class="add"><button id="add-product" onclick="onAddNewProduct()">Add product</button></div>
+    <div class="Update-currency">
+      <label for="currency">USD / KHR • CURRENCY</label>
+      <input type="number" oninput="updateCurrency()" name="currency" id="add-currency" onclick="updateCurrency()">
+    </div>
+  </div>
+  <table id="table-container">
+    <thead>
+      <tr>
+        <th>images</th>
+        <th>Product name</th>
+        <th>Price</th>
+        <th>Describe</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="body-table">
+      <!-- dispaly tr tables -->
+    </tbody>
+  </table>
+
+  <div id="product-dialog" style="display: none">
+    <dialog open>
+      <section>
+        <h2 id="titleOfForm">Add new product</h2>
+        <label for="">Name of product</label>
+        <input id="name-value" type="text" placeholder="Add  product name" />
+        <label for="">Describe</label>
+        <input id="describe-value" type="text" placeholder="Add  product name" />
+        <label for="currency">Currency</label>
+        <select onchange="checkOnPriceInput()" name="currency" id="currency-value">
+          <option value="$" >USD</option>
+          <option value="៛" selected>Riel</option>
+        </select>
+        <label for="">Price of product (៛)</label>
+        <input oninput="calculatePrice('៛')" id="price-value-riel" type="number" placeholder="Add product price in Riel" />
+        <label for="">Price of product ($)</label>
+        <input oninput="calculatePrice('$')" id="price-value-usd" type="number" placeholder="Add product price in USD" />
+        
+        <label for="">img</label>
+        <input id="img-value" type="text" placeholder="Enter img" />
+      </section>
+
+      <menu>
+        <!-- When clicking on button,  call the right function  -->
+        <button id = 'btn-cancel' onclick="onCancel(event)">Cancel</button>
+
+        <!-- When clicking on button,  call the right function  -->
+        <button id = 'btn-create' onclick="onCreate(event)">Save</button>
+      </menu>
+    </dialog>
+  </div>
+</body>
+<script src="../js/seller.js"></script>
+
+</html>

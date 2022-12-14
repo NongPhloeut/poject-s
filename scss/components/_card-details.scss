@@ -1,0 +1,53 @@
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(78, 76, 76, 0.75);
+    z-index: 10;
+    .card-delails{
+        background: white;
+        width: 50%;
+        height: 80vh;
+        border-radius: 10px;
+        display: flex;
+        .delails-img{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 90%;
+            }
+        }
+        .descript{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .name-prodcut{
+                padding: 20px;
+                flex: 1;
+            }
+            .description{
+                @extend .name-prodcut;
+            }
+            .price{
+                @extend .name-prodcut;
+          
+            }
+            .stars{
+                @extend .name-prodcut;
+            }
+            .back{
+                @extend .name-prodcut;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

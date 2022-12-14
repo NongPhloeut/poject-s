@@ -1,0 +1,58 @@
+@import "components/navbar.scss";
+@import "components/mixin.scss";
+@import "components/card.scss";
+@import "components/footer.scss";
+@import "components/form.scss";
+@import "components/card-details.scss";
+@import "components/banner.scss";
+
+body{
+    @include body (150vh);
+    font-family: sans-serif;
+    @include spacing(0,0);
+}
+
+#product-dialog{
+    dialog{
+        top: 40px;
+        width: 40%;
+        margin-left: 10%;
+    }
+    section{
+        h2{
+            color: blue;
+        }
+        input{
+            padding: 5px;
+        }
+        ::placeholder{
+            font-size: 15px;
+        }
+        #password-label{
+            font-size: 12px;
+            margin-right: 20px;
+            display: flex;
+            justify-content: flex-end;
+            font-weight: str-index($string: "s", $substring: "s");
+        }
+        label{
+            font-weight: str-index($string: "s", $substring: "s");
+            font-size: 16px;
+        }
+    }
+
+}
+
+dialog {
+    width: 25%;
+}
+ul{
+    width: 150%;
+}
+#btn-card{
+    width:80%;
+    #qty{
+        font-size:20px;
+        font-weight: bold;
+    }
+}

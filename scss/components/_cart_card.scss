@@ -1,0 +1,86 @@
+@import"variables";
+
+#shop-title{
+    margin-left: 50px;
+    flex: 2;
+    align-self: center;
+}
+
+.cart-total{
+    display: flex;
+    .header{
+        flex: 0.7;
+        // background: rgb(207, 150, 150);
+        padding: 0px 60px;
+        .check-add{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0.6; 
+            display: flex;
+            background: white;
+            flex-direction: column;
+            padding-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            #check-add{
+                width: 80%;
+                
+            }
+            .total-price{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 80%;
+                .dola ,.riel{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }    
+
+    }
+    .shop-storage{
+        // background: rgb(131, 60, 60);
+        flex: 2;
+        padding: 0px 54px;
+        .card-product{
+            display: flex;
+            flex: 0.2;
+            background: white;
+            border-radius: 10px;
+            .img-product{
+                flex: 1;
+                // background: rgb(197, 99, 99);
+                padding: 20px;
+                img{
+                    width: 240px;
+                    background: #000;
+                }
+            }
+            .product-price{
+                // background: #000;
+                flex: 1;
+                input{
+                    width: 30%;
+                    border: solid 1px;
+                }
+            }
+            .check-cancel{
+                flex: 0.8;
+                display: flex;
+                align-self: flex-end;
+                justify-content: flex-end;
+                #remove{
+                    width: 50%;
+                    background: red;
+                }
+            }
+        }
+    }
+}
+
+
+
+

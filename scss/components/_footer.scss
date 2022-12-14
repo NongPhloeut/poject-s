@@ -1,0 +1,49 @@
+@import"mixin";
+footer {   
+    border: solid 1px rgb(221, 205, 205);
+    @include flexProp(flex, row) {
+        background:$footerBg;
+        padding: 35px;
+    }
+    #text{
+        text-align: center;
+    }
+    .abuot{
+        text-align: center;
+    }
+    .contact-media  {
+        // background: rgb(182, 92, 92);
+        @include flexProp(flex, column) {
+            justify-content: center;
+            flex: 1;
+            align-items: center;
+            gap: 20px;
+            .fa-facebook {
+                font-size: 30px;
+                text-decoration: none;
+                color: blue;
+                margin: 20px;
+            }
+
+            .fa-twitter {
+                @extend .fa-facebook;
+                color: blue;
+            }
+
+            .fa-google {
+                @extend .fa-facebook;
+                color: red;
+            }
+
+            .fa-linkedin {
+                @extend .fa-facebook;
+            }
+
+            .fa-youtube {
+                @extend .fa-facebook;
+                color: red;
+            }
+        }
+    }
+}
+

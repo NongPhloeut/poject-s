@@ -1,0 +1,108 @@
+@import"mixin";
+@import"input";
+@import"button";
+
+.nav-container {
+    background:$navColor;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    #navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            @include flex-center(center, center);
+            margin-left: -50px;
+        }
+
+        .login {
+            display: flex;
+            width: 30%;
+            ul,
+            li {
+                display: flex;
+                padding: 10px;
+            }
+            #btn-login ,#btn-register ,#btn-cart {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+                width: 45%;
+            }
+        }
+    }
+    .search-container {
+        background-color: white;
+
+        @include flexProp(flex, row) {
+            align-items: center;
+        }
+
+        width: 40%;
+        border-radius: $border-radius;
+
+        input {
+            @include flexSize(1);
+            border: none;
+            outline: none;
+            // padding: 15px;
+        }
+
+        span {
+            @include button;
+            text-align: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: white;
+        }
+        .material-icons{
+            margin-left: 10px;
+        }
+
+    }
+}
+
+
+.seachBar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: $bg;
+    .baner{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        img{
+            margin-left: 60px;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+.media-register {
+    @include flexProp(flex, row) {
+        justify-content: center;
+        align-items: center;
+        .fa-facebook {
+            font-size: 30px;
+            text-decoration: none;
+            color: blue;
+            margin-left: 20px;
+        }
+        .fa-google-plus {
+            @extend .fa-facebook;
+            color: red;
+        }
+    }
+}
+
+button{
+    @include button;
+    margin: 10px;
+    width: 80px;
+}
